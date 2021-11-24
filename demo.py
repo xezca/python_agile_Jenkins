@@ -1,3 +1,3 @@
 print("hello")
 print("Jenkins")
-print("have a great day")
+print("have a good day")
