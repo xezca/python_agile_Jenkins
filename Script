@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '**']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/xezca/python_agile_Jenkins.git']]])
+            }
+        }
+        stage('build'){
+            steps{
+                git branch: '', url: 'https://github.com/xezca/python_agile_Jenkins.git'
+                bat 'python demo.py'
+            }
+        }
+    }
+}
