@@ -1,4 +1,4 @@
 print("hello")
 print("Jenkins")
 i=2
-print(i)
+print(i+7)
